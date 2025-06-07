@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Showroom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #1E88E5, #FF6F61, #FFD700, #32CD32, #8A2BE2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1, h2, h3 {
+            background: linear-gradient(270deg, #1E88E5, #FF6F61, #FFD700, #32CD32, #8A2BE2);
+            background-size: 400% 400%;
+            animation: headingBG 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: fit-content;
+            margin: 20px auto;
+            display: block;
+        }
+
+        @keyframes headingBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            background: linear-gradient(-45deg, #1E88E5, #FF6F61, #FFD700, #32CD32, #8A2BE2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #dcdcdc;
+        }
+
+        section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #ddd;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            margin: 25px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        p, ul {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        input, button, select {
+            padding: 10px 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background: #f8f8f8;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #taskList li {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #taskList li:hover {
+            background-color: #e0e0e0;
+        }
+
+        #categoryFilter, #sortFilter {
+            width: 100%;
+            max-width: 200px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+
+            h1, h2, h3 {
+                font-size: 1.8em;
+                padding: 3px 8px;
+            }
+
+            section {
+                padding: 25px 15px;
+                margin: 15px auto;
+            }
+
+            input, button, select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cars Showroom</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#car-notes">Car Notes</a>
+            <a href="#car-lists">Car Lists</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About This Website</h2>
+            <p>Welcome to the **Cars Showroom**! This platform is designed to showcase an impressive collection of car listings, help you manage your car-related notes, and provide an easy way to explore different car categories. Whether you're a car enthusiast or looking for your next ride, we've got you covered.</p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>Browse through **latest car models** with detailed information.</li>
+                <li>Access valuable **maintenance tips** to keep your vehicle in top condition.</li>
+                <li>Compare **Electric vs. Petrol cars** to make informed decisions.</li>
+                <li>Keep track of personal car notes using our integrated note-taking app.</li>
+                <li>Filter and sort car listings by type, price, and rating.</li>
+            </ul>
+
+            <h3>Contact Us</h3>
+            <p>Have questions or suggestions? Feel free to reach out to our support team!</p>
+            <p>Email: <a href="mailto:carsupport@example.com">carsupport@example.com</a></p>
+        </section>
+
+        <section id="car-notes">
+            <h2>Your Car Notes</h2>
+            <p>Jot down important reminders, research points, or anything related to cars here. Click on a note to delete it.</p>
+            <input type="text" id="taskInput" placeholder="e.g., 'Check tire pressure', 'Research new SUV models'..." />
+            <button id="addNoteBtn">Add Note</button>
+            <ul id="taskList">
+            </ul>
+        </section>
+
+        <section id="car-lists">
+            <h2>Available Car Lists</h2>
+
+            <label for="categoryFilter">Filter by Type:</label>
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                <option value="suv">SUV</option>
+                <option value="sedan">Sedan</option>
+                <option value="electric">Electric</option>
+            </select>
+
+            <label for="sortFilter">Sort by:</label>
+            <select id="sortFilter">
+                <option value="default">Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Rating: High to Low</option>
+            </select>
+
+            <ul id="productList">
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        const taskList = document.getElementById('taskList');
+        const taskInput = document.getElementById('taskInput');
+        const addNoteBtn = document.getElementById('addNoteBtn');
+
+        function loadNotes() {
+            const notes = JSON.parse(localStorage.getItem('carNotes')) || [];
+            taskList.innerHTML = '';
+            notes.forEach((note, index) => {
+                const li = document.createElement('li');
+                li.textContent = note;
+                li.setAttribute('data-index', index);
+                li.addEventListener('click', () => deleteNote(index));
+                taskList.appendChild(li);
+            });
+        }
+
+        function addNote() {
+            const note = taskInput.value.trim();
+            if (note === '') return;
+
+            const notes = JSON.parse(localStorage.getItem('carNotes')) || [];
+            notes.push(note);
+            localStorage.setItem('carNotes', JSON.stringify(notes));
+
+            taskInput.value = '';
+            loadNotes();
+        }
+
+        function deleteNote(indexToDelete) {
+            let notes = JSON.parse(localStorage.getItem('carNotes'));
+            notes.splice(indexToDelete, 1);
+            localStorage.setItem('carNotes', JSON.stringify(notes));
+            loadNotes();
+        }
+
+        addNoteBtn.addEventListener('click', addNote);
+        taskInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                addNote();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', loadNotes);
+
+        const products = [
+            { name: "Tesla Model 3", category: "electric", price: 4500000, rating: 4.8 },
+            { name: "Toyota Fortuner", category: "suv", price: 3500000, rating: 4.5 },
+            { name: "Honda Civic", category: "sedan", price: 2500000, rating: 4.3 },
+            { name: "Hyundai Creta", category: "suv", price: 1800000, rating: 4.2 },
+            { name: "Mahindra XUV700", category: "suv", price: 2200000, rating: 4.6 },
+            { name: "Tata Nexon EV", category: "electric", price: 1600000, rating: 4.7 },
+            { name: "Maruti Suzuki Swift", category: "sedan", price: 800000, rating: 4.0 }
+        ];
+
+        const productList = document.getElementById('productList');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const sortFilter = document.getElementById('sortFilter');
+
+        function formatPrice(price) {
+            return new Intl.NumberFormat('en-IN', {
+                style: 'currency',
+                currency: 'INR',
+                minimumFractionDigits: 0
+            }).format(price);
+        }
+
+        function displayProducts(currentProducts = products) {
+            productList.innerHTML = '';
+
+            if (currentProducts.length === 0) {
+                const noResults = document.createElement('li');
+                noResults.textContent = "No cars match your criteria.";
+                noResults.style.textAlign = 'center';
+                noResults.style.fontStyle = 'italic';
+                noResults.style.color = '#777';
+                productList.appendChild(noResults);
+                return;
+            }
+
+            currentProducts.forEach(product => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <strong>${product.name}</strong><br>
+                    Type: ${product.category.charAt(0).toUpperCase() + product.category.slice(1)} |
+                    Price: ${formatPrice(product.price)} |
+                    Rating: ${product.rating} / 5
+                `;
+                productList.appendChild(li);
+            });
+        }
+
+        function filterAndSortProducts() {
+            const selectedCategory = categoryFilter.value;
+            const selectedSort = sortFilter.value;
+
+            let filtered = products;
+            if (selectedCategory !== 'all') {
+                filtered = products.filter(p => p.category === selectedCategory);
+            }
+
+            let sorted = [...filtered];
+            if (selectedSort === 'price-asc') {
+                sorted.sort((a, b) => a.price - b.price);
+            } else if (selectedSort === 'price-desc') {
+                sorted.sort((a, b) => b.price - a.price);
+            } else if (selectedSort === 'rating-desc') {
+                sorted.sort((a, b) => b.rating - a.rating);
+            }
+
+            displayProducts(sorted);
+        }
+
+        categoryFilter.addEventListener('change', filterAndSortProducts);
+        sortFilter.addEventListener('change', filterAndSortProducts);
+
+        document.addEventListener('DOMContentLoaded', filterAndSortProducts);
+    </script>
+
+</body>
+</html>
